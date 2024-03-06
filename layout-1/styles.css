@@ -1,0 +1,33 @@
+body{
+    /* background: linear-gradient(to right, rgb(49, 46, 46), rgb(76, 104, 165)); */
+    background: rgb(1, 43, 4);
+}
+.container{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 15rem 40rem ;
+    grid-template-rows: 15rem 60rem;
+
+}
+
+.item{
+    border: 3px solid red;
+    color: white;
+
+    counter-increment: item;
+}
+
+.item::before{
+    content: counter(item);
+}
+
+.item:nth-of-type(1){
+    border-color: aqua;
+
+    grid-column-start: 1;
+    grid-column-end: inline-end;
+
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+
+}

@@ -1,0 +1,22 @@
+body{
+    /* background: linear-gradient(to right, rgb(49, 46, 46), rgb(76, 104, 165)); */
+    background: black;
+}
+.container{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 1rem 4rem 8rem 1rem 5rem;
+    grid-template-rows: 4rem 10rem;
+
+}
+
+.item{
+    border: 3px solid red;
+    color: white;
+
+    counter-increment: item;
+}
+
+.item::before{
+    content: counter(item);
+}

@@ -1,0 +1,43 @@
+@import "./grid.css";
+@import "./list.css";
+
+
+body{
+    background-color: rgb(68, 66, 66);
+}
+input{
+    display: none;
+}
+
+label{
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    user-select: none;
+}
+
+.project-actions{
+    /* border: 1px solid saddlebrown; */
+    gap: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-inline-end: 1rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.project-list{
+    /* border: 1px solid saddlebrown; */
+    padding: 1rem;
+}
+
+input[id="list"]:checked ~ .project-actions [for="list"],
+input[id="grid"]:checked ~ .project-actions [for="grid"]{
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 0px 0px 20px 5px rgb(247, 247, 247);
+}
+
+
